@@ -15,7 +15,7 @@ const maxProfit = function(array) {
     }
   });
   const max = profitArray.sort((a, b) => b - a)[0];
-  if (max >= 0) {
+  if (max > 0) {
     return max;
   } else {
     return -1;
@@ -23,10 +23,10 @@ const maxProfit = function(array) {
 };
 
 const stockPricePerDay = [45, 24, 35, 31, 40, 38, 11];
-console.log(maxProfit(stockPricePerDay));
+console.log(maxProfit(stockPricePerDay)); // returns 16
 
 const test = [10, 7, 5, 8, 11, 9, 1];
-console.log(maxProfit(test));
+console.log(maxProfit(test)); // returns 6
 
-const test2 = [10, 7, 9, 8, 5, 4, 1];
-console.log(maxProfit(test2));
+const test2 = [10, 9, 8, 5, 4, 1];
+console.log(maxProfit(test2)); // returns -1
