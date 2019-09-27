@@ -12,24 +12,6 @@ const maxProfit = function(array) {
     return Math.max(buyMax, sellMax, crossMax);
   }
   
-
-  // let profitArray = [];
-  // let profit = sell[0] - buy[0];
-
-  // buy.forEach(item => {
-  //   if (item.length > 1) {
-  //     profitArray.push(profit);
-  //     maxProfit(item);
-  //   } else {
-  //     profitArray.push(profit);
-  //   }
-  // });
-  // const max = profitArray.sort((a, b) => b - a)[0];
-  // if (max > 0) {
-  //   return max;
-  // } else {
-  //   return -1;
-  // }
 };
 
 const stockPricePerDay = [45, 24, 35, 31, 40, 38, 11];

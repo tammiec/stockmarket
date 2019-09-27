@@ -18,7 +18,7 @@ const maxProfit = function(array) {
   } else {
     return profit;
   }
-}
+};
 
 const stockPricePerDay = [45, 24, 35, 31, 40, 38, 11];
 console.log(maxProfit(stockPricePerDay));
