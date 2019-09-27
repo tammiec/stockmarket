@@ -1,15 +1,35 @@
 const maxProfit = function(array) {
-
+  
   const midIndex = Math.ceil(array.length / 2);
   const buy = array.slice(0, midIndex);
   const sell = array.slice(midIndex, array.length);
-  
   if (array.length === 1) {
     return -1;
   } else {
-    return Math.max(maxProfit(buy), maxProfit(sell), Math.max(...sell) - Math.min(...buy));
+    let buyMax = maxProfit(buy);
+    let sellMax = maxProfit(sell);
+    let crossMax = Math.max(...sell) - Math.min(...buy);
+    return Math.max(buyMax, sellMax, crossMax);
   }
+  
 
+  // let profitArray = [];
+  // let profit = sell[0] - buy[0];
+
+  // buy.forEach(item => {
+  //   if (item.length > 1) {
+  //     profitArray.push(profit);
+  //     maxProfit(item);
+  //   } else {
+  //     profitArray.push(profit);
+  //   }
+  // });
+  // const max = profitArray.sort((a, b) => b - a)[0];
+  // if (max > 0) {
+  //   return max;
+  // } else {
+  //   return -1;
+  // }
 };
 
 const stockPricePerDay = [45, 24, 35, 31, 40, 38, 11];
